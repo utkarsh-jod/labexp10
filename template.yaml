@@ -1,0 +1,15 @@
+
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Experiment 10 - S3 Bucket
+
+Resources:
+  ExperimentBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      Tags:
+        - Key: Experiment
+          Value: Experiment10
+
+Outputs:
+  BucketName:
+    Value: !Ref ExperimentBucket
